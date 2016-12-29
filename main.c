@@ -1,7 +1,7 @@
 #include <stdio.h>
+char out[]={};
 char *z(char *t,int n,int h){
-	char out[h]={};
-	char o[n][99]={},k[n]={};
+	char o[n][99],k[n];
 	int i,j,x=0,z=0;
 	for(i=0;x<=h;i++){
 		for(j=0;j<n-1&&x<=h;j++,x++)
@@ -13,7 +13,6 @@ char *z(char *t,int n,int h){
 		for(j=0;j<k[i];j++)
 			if(o[i][j]!='\0')out[z++]=o[i][j];
 	}
-	printf("\r",out);
 	return out;
 }
 int main(){
